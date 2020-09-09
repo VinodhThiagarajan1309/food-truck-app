@@ -1,16 +1,16 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://x7rnmcy7zk.execute-api.us-east-1.amazonaws.com/prod',
   withCredentials: false,
   headers: {
-    Accept: 'application/json',
+    
     'Content-Type': 'application/json'
   }
 })
 
 export default {
   getItems () {
-    return apiClient.get('/items')
+    return apiClient.get('/item')
   }
 }
