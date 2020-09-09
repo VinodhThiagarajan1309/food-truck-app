@@ -1,0 +1,57 @@
+{ "items" : [
+    {
+        "itemId" : "9df1641a-3176-4077-918b-09cacd46e83a",
+        "itemName" : "Chips and Salsa",
+        "itemPrice" : 2.99,
+        "itemImgUrl" : "https://i.ibb.co/820w3kF/food-2580200-640.jpg" 
+    },
+    {
+        "itemId" : "53ad7ef8-9ad9-433a-bd95-7059820b0dc6",
+        "itemName" : "Mac and cheese",
+        "itemPrice" : 2.99,
+        "itemImgUrl" : "https://i.ibb.co/r23hv2w/food-4305743-640.jpg" 
+    },
+    {
+        "itemId" : "fe03f7d8-7d29-4cef-8093-e04bf91a1687",
+        "itemName" : "Tomato Soup",
+        "itemPrice" : 2.99,
+        "itemImgUrl" : "https://i.ibb.co/D7HhbzB/soup-1429793-640.jpg" 
+    },
+    {
+        "itemId" : "2899e9e6-8bf7-44ae-b1fc-f3794fcff6f8",
+        "itemName" : "Chicken Burger",
+        "itemPrice" : 5.99,
+        "itemImgUrl" : "https://i.ibb.co/XFHVckD/chicken-burger-2953388-640.jpg" 
+    },
+    {
+        "itemId" : "2e9c544f-f143-4e34-85ad-d944bc740936",
+        "itemName" : "Pasta",
+        "itemPrice" : 5.99,
+        "itemImgUrl" : "https://i.ibb.co/kKnjPBd/pasta-712664-640.jpg" 
+    },
+    {
+        "itemId" : "846666f9-6089-4971-919c-69974a7ba919",
+        "itemName" : "Grilled Steak",
+        "itemPrice" : 5.99,
+        "itemImgUrl" : "https://i.ibb.co/Fb3zz3k/steak-3766548-640.jpg" 
+    },
+    {
+        "itemId" : "bea014fa-c643-4974-bea4-26c574ba20b2",
+        "itemName" : "Soda",
+        "itemPrice" : 1.99,
+        "itemImgUrl" : "https://i.ibb.co/74T4LR1/lime-907124-640.jpg" 
+    },
+    {
+        "itemId" : "ec1909a7-c195-4d7a-bbd7-22822dee62e0",
+        "itemName" : "Ice Cream",
+        "itemPrice" : 1.99,
+        "itemImgUrl" : "https://i.ibb.co/3Rz8hqB/ice-564944-640.jpg" 
+    },
+    {
+        "itemId" : "d45a7ad9-e4c2-4780-a182-1ce5d7c2efe3",
+        "itemName" : "Milk Shake",
+        "itemPrice" : 1.99,
+        "itemImgUrl" : "https://i.ibb.co/nb7Qw3z/milk-2585099-640.jpg" 
+    }
+]
+}
