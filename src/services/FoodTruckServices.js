@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'https://x7rnmcy7zk.execute-api.us-east-1.amazonaws.com/prod',
+  //baseURL: 'https://x7rnmcy7zk.execute-api.us-east-1.amazonaws.com/prod',
+  baseURL: 'http://localhost:3000',
   withCredentials: false,
   headers: {
     
@@ -11,6 +12,6 @@ const apiClient = axios.create({
 
 export default {
   getItems () {
-    return apiClient.get('/item')
+    return apiClient.get('/items')
   }
 }
