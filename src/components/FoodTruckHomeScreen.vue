@@ -78,12 +78,16 @@
       <b-modal id="bv-modal-example" hide-footer>
         <template v-slot:modal-title>
           Order No :
-          <code>$bvModal</code>
+          <code>{{orderNumber}}</code>
         </template>
         <div class="d-block text-center">
           <h3>Order placed for total {{ finalizedTotal | format2Digit }}</h3>
         </div>
-        <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example');cleanUpPrevOrder()">Close Me</b-button>
+        <b-button
+          class="mt-3"
+          block
+          @click="$bvModal.hide('bv-modal-example');cleanUpPrevOrder()"
+        >Close Me</b-button>
       </b-modal>
     </div>
   </div>
@@ -103,6 +107,7 @@ export default {
       total: 0,
       enablePlaceOrder: false,
       finalizedTotal: 0,
+      orderNumber: ''
     };
   },
   created() {
@@ -124,17 +129,26 @@ export default {
     placeTheOrder() {
       var finalizedOrder = {
         lineItems: this.orders.map((x) => x.itemName),
-        orderTotal: this.total,
+        orderTotal: this.total.toFixed(2),
       };
       this.finalizedTotal = this.total;
       console.log(finalizedOrder);
+      FoodTruckServices.createOrder(finalizedOrder).then(
+        (response) => {
+          console.log(" Priya Mrith Megh " + JSON.stringify(response.data.orderNo));
+          this.orderNumber = response.data.orderNo;
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
     },
     cleanUpPrevOrder() {
       this.orders = [];
       this.total = 0;
       this.enablePlaceOrder = false;
       this.finalizedTotal = 0;
-    }
+    },
   },
   filters: {
     format2Digit: function (value) {

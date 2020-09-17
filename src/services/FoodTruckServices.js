@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  //baseURL: 'https://x7rnmcy7zk.execute-api.us-east-1.amazonaws.com/prod',
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://x7rnmcy7zk.execute-api.us-east-1.amazonaws.com/prod',
+  //baseURL: 'http://localhost:3000',
   withCredentials: false,
   headers: {
     
@@ -12,6 +12,12 @@ const apiClient = axios.create({
 
 export default {
   getItems () {
-    return apiClient.get('/items')
+    return apiClient.get('/item')
+  },
+  createOrder (finalizedOrder) {
+    return apiClient.post('/order', {
+      lineItems: finalizedOrder.lineItems,
+      orderTotal: finalizedOrder.orderTotal
+    });
   }
 }
