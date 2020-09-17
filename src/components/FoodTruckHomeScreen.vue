@@ -77,7 +77,7 @@
     <div>
       <b-modal id="bv-modal-example" hide-footer>
         <template v-slot:modal-title>
-          Order No :
+          Order No : 
           <code>{{orderNumber}}</code>
         </template>
         <div class="d-block text-center">
@@ -135,8 +135,8 @@ export default {
       console.log(finalizedOrder);
       FoodTruckServices.createOrder(finalizedOrder).then(
         (response) => {
-          console.log(" Priya Mrith Megh " + JSON.stringify(response.data.orderNo));
-          this.orderNumber = response.data.orderNo;
+          var truncOrderNum = response.data.orderNo;
+          this.orderNumber = truncOrderNum.split('-')[4]
         },
         (error) => {
           console.log(error);
