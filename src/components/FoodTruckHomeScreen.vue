@@ -75,7 +75,7 @@
     </footer>
     <!-- Footer -->
     <div>
-      <b-modal id="bv-modal-example" hide-footer>
+      <b-modal id="bv-modal-example" hide-footer no-close-on-backdrop hide-header-close>
         <template v-slot:modal-title>
           Order No : 
           <code>{{orderNumber}}</code>
